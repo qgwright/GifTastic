@@ -1,0 +1,63 @@
+body {
+  
+    background-image: ./assets/images/("blast.jpg");
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+
+    font-weight:bold;
+    font-size: 69px;
+    margin-bottom: 15p;
+}
+
+.wrapper {
+    margin:60px 0 60px 60px;
+}
+.artist-button {
+    font-siz:14px;
+    background: #ESA073;
+    border: none;
+    padding:10 px 15px;
+    margin: 6px;
+    border-radius: 10px;
+}
+
+#artist.button:hover, #artist-button:active {
+    background:#00cc00;
+}
+
+#new-artist-input {
+    padding: 10px 15px;
+    font: size 14px;
+    border: none;
+    border-radius: 10px
+}
+#button-group {
+    margin-right: 20px;
+    margin-botton: 15px;
+}
+
+.result-container {
+	margin: 30px 30px 0 0;
+}
+
+.result {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.result:hover {
+	-webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow:    10px 10px 0px 0px rgba(0, 0, 0, 0.4);
+	box-shadow:         10px 10px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+p {
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0 0 6px 4px;
+}
