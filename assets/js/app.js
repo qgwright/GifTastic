@@ -1,24 +1,19 @@
 var topics = [
   "Madonna",
-  "Hall & Oates",
   "Culture Club",
   "Michael Jackson",
   "Cindy Lauper",
   "Eurythmics",
   "The Police",
   "Run DMC",
-  "Guns & Roses",
   "LL Cool J",
-  "Big Daddy Kane",
-  "Heavy D and the Boyz",
-  "The Thompson Twins",
   "Duran Duran",
   "Millie Vanilli",
   "The Police",
   "Metallica"
 ];
 
-for(var i = 0; i < topics.length; i++) {
+for (var i = 0; i < topics.length; i++) {
   var button = $("<button>").text(topics[i]);
   button.attr("data-artist", topics[i]);
   button.addClass("artist-button");
@@ -51,8 +46,7 @@ $(document).on("click", ".artist-button", function() {
     artist +
     "&api_key=vMhlUdXpscuBLjJitOZnJwXzRtOiM4Ny";
 
-  $.ajax({ url: queryURL, method: "GET" 
-  }).done(function(response) {
+  $.ajax({ url: queryURL, method: "GET" }).done(function(response) {
     //console.log(response);
     var results = response.data;
     //console.log(results);
@@ -61,19 +55,18 @@ $(document).on("click", ".artist-button", function() {
 
     for (var i = 0; i < results.length; i++) {
       var singleResultDiv = $("<div class='result-container'>");
-      var rating =results[i].rating;
-      
-      var p =$("<p>").text("Rating:" + rating);
+      var rating = results[i].rating;
+
+      var p = $("<p>").text("Rating:" + rating);
 
       var artistImg = $("<img class= 'results'>");
       artistImg.attr("src", results[i].images.fixed_height_still.url);
       artistImg.attr("data-state", "still");
       artistImg.attr("data-still", results[i].images.fixed_height_still.url);
       artistImg.attr("data-animate", results[i].images.fixed_height.url);
-      
-       singleResultDiv.prepend(artistImg);
-       singleResultDiv.prepend(p);
-         
+
+      singleResultDiv.prepend(artistImg);
+      singleResultDiv.prepend(p);
 
       resultsContainerSection.prepend(singleResultDiv);
     }

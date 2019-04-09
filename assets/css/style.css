@@ -1,9 +1,18 @@
-body {
-  
-    background-image: #0b9476
-    font-family Helvetica, Arial, sans-serif;
-}
 
+  
+   
+body {   
+
+    height:100vh;
+    background-image: url(../images/Blast.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color:whitesmoke;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
 h1 {
 
     font-weight:bold;
@@ -12,7 +21,7 @@ h1 {
 }
 
 .wrapper {
-    margin:60px 0 60px 60px;
+    margin:10px 0 10px 10px;
 }
 .artist-button {
     font-size:14px;
